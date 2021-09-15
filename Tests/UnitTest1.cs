@@ -35,14 +35,6 @@ namespace Tests
         [InlineData("POST")]
         public async Task TestAutenticadGeneric(string method)
         {
-            //using (var client = new UnitTest1()._client)
-            //{
-            //    var response = await client.PostAsync("/api/User/authenticateGeneric",null);
-
-            //    response.EnsureSuccessStatusCode();
-
-            //    Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-            //}
             var request = new HttpRequestMessage(new HttpMethod(method), "/api/User/authenticateGeneric");
 
             var response = await _client.SendAsync(request);
