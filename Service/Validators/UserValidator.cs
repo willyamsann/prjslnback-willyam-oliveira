@@ -28,8 +28,8 @@ namespace Service.Validators
                 .MinimumLength(10).WithMessage("O tamanho minimo é de 10 caracteres")
                     .Must(ValidateRepeatedCharacters).WithMessage("Existem caracteres em sequencia repetidos")
                     .Matches(@"[A-Z]+").WithMessage("Sua senha deve conter pelo menos uma letra maiúscula.")
-                    .Matches(@"[a-z]+").WithMessage("Your password must contain at least one lowercase letter.")
-                    .Matches(@"[0-9]+").WithMessage("Sua senha deve conter pelo menos uma letra minúscula.")
+                    .Matches(@"[a-z]+").WithMessage("Sua senha deve conter pelo menos uma letra miniscula.")
+                    .Matches(@"[0-9]+").WithMessage("Sua senha deve conter pelo menos um numero.")
                     .Matches(@"[\!\?\*\.\@\#\-\!]+").WithMessage("Sua senha deve conter pelo menos um (!? *.).");
         }
 
